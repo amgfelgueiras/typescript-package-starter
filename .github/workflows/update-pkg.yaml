@@ -22,7 +22,7 @@ jobs:
           path: dependent-project
       - name: Update PKGs
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dependent-project
           npm install

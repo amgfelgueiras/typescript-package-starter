@@ -15,9 +15,13 @@ jobs:
           scope: "@amgfelgueiras"
       - name: Install Angular CLI
         run: npm i -g @angular/cli
+      - name: Checkout tools repo
+        uses: actions/checkout@v2
+        with:
+          repository: amgfelgueiras/dependent-project
+          path: dependent-project
       - name: Update PKGs
         run: |
-          git clone git@github.com:amgfelgueiras/dependent-project.git 
           cd dependent-project
           npm install @amgfelgueiras/typescript-package-starter
           npm run build

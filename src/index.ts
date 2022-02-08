@@ -1,3 +1,3 @@
 export const helloWorld = () => {
-    return 'Howdy!'
+    return 'New Howdy! 1.3.0'
 }

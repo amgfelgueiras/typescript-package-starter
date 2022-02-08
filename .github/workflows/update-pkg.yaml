@@ -31,7 +31,9 @@ jobs:
           echo '----'
           npm install
           npm install @amgfelgueiras/typescript-package-starter
-          npm run build
+          echo '----'
+          cat package.json
+          echo '----'
           git add .
           git commit -m "version updated"
           git push

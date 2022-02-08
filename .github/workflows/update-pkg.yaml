@@ -22,7 +22,7 @@ jobs:
           path: dependent-project
       - name: Update PKGs
         env:
-          NODE_AUTH_TOKEN: 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
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           cd dependent-project
           npm install "@amgfelgueiras/typescript-package-starter"

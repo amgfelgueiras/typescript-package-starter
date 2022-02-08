@@ -26,6 +26,9 @@ jobs:
         run: |
           cd dependent-project
           echo $PWD
+          echo '----'
+          cat package.json
+          echo '----'
           npm install
           npm install @amgfelgueiras/typescript-package-starter
           npm run build

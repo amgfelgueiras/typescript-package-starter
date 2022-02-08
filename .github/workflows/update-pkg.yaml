@@ -25,9 +25,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dependent-project
+          echo $PWD
           npm install
           npm install @amgfelgueiras/typescript-package-starter
-          npm build
+          npm run build
           git add .
           git commit -m "version updated"
           git push

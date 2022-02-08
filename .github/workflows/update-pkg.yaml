@@ -26,7 +26,8 @@ jobs:
         run: |
           cd dependent-project
           npm install
-          npm run build
+          npm install @amgfelgueiras/typescript-package-starter
+          npm build
           git add .
           git commit -m "version updated"
           git push

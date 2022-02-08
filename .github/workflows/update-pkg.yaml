@@ -25,6 +25,11 @@ jobs:
         #   NODE_AUTH_TOKEN: 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
         run: |
           cd dependent-project
+          rm .npmrc
+          echo "//npm.pkg.github.com/:_authToken=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" > .npmrc
+          echo "@amgfelgueiras:registry=https://npm.pkg.github.com" >> .npmrc
+          echo "_auth=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" >> .npmrc
+          echo "always-auth=true" >> .npmrc
           npm install @amgfelgueiras/typescript-package-starter
           npm run build
           git add .

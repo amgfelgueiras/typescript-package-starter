@@ -26,11 +26,14 @@ jobs:
         run: |
           cd dependent-project
           echo $PWD
-          npm install
-          npm install @amgfelgueiras/typescript-package-starter
           cat package.json
+          touch cenas.json
+          echo 'cenas' >> cenas.json
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
           git commit -m "generated"
           git push
+
+        # npm install
+        # npm install @amgfelgueiras/typescript-package-starter

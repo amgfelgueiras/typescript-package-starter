@@ -19,7 +19,10 @@ jobs:
         with:
           repository: amgfelgueiras/dependent-project
           path: dependent-project
-      - run: |
+      - name: Update PKGs
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
           ls -lh >> echo.txt
           cat echo.txt
           echo '--- 0'

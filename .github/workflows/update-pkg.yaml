@@ -20,9 +20,6 @@ jobs:
         with:
           repository: amgfelgueiras/dependent-project
           path: dependent-project
-      - name: Update PKGs
-        # env:
-        #   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd dependent-project
           echo $PWD
@@ -34,6 +31,3 @@ jobs:
           git add .
           git commit -m "generated"
           git push
-
-        # npm install
-        # npm install @amgfelgueiras/typescript-package-starter

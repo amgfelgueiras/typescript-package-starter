@@ -20,13 +20,15 @@ jobs:
           cat echo.txt
 
       - uses: actions/checkout@v2
-        # with:
-        #   repository: amgfelgueiras/dependent-project
-        #   path: dependent-project
+        with:
+          repository: amgfelgueiras/dependent-project
+          path: dependent-project
       - name: Update PKGs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          ls -lh >> echo.txt
+          cat echo.txt
           git clone git@github.com:amgfelgueiras/dependent-project.git
           ls -lh >> echo.txt
           cat echo.txt

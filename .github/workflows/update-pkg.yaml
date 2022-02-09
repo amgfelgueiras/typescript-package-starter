@@ -13,6 +13,8 @@ jobs:
           node-version: v16.13.1
           registry-url: "https://npm.pkg.github.com"
           scope: "@amgfelgueiras"
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
       - name: Install Angular CLI
         run: npm i -g @angular/cli
       - name: Checkout tools repo

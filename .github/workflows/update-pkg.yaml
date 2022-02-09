@@ -20,7 +20,12 @@ jobs:
           repository: amgfelgueiras/dependent-project
           path: dependent-project
       - run: |
+          ls -lh >> echo.txt
+          cat echo.txt
+          echo '--- 0'
           cd dependent-project
+          ls -lh >> echo.txt
+          cat echo.txt
           echo $PWD
           cat package.json
           touch cenas.json

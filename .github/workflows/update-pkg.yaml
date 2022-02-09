@@ -19,7 +19,7 @@ jobs:
         with:
           repository: amgfelgueiras/dependent-project
           path: dependent-project
-        run: |
+      - run: |
           cd dependent-project
           echo $PWD
           cat package.json

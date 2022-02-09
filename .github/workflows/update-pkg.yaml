@@ -36,10 +36,13 @@ jobs:
           npm install @amgfelgueiras/typescript-package-starter
           echo '---- 4'
           cat package.json
-          echo '----'
+          echo '---- 5'
           git config user.name "António Felgueiras"
           git config user.email "amgfelgueiras@gmail.com"
-          echo '---- 5'
+          echo '---- 6'
           git add .
+          echo '---- 7'
           git commit -m "version updated"
+          echo '---- 8'
           git push
+          echo '---- 9'

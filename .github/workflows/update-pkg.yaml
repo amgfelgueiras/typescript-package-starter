@@ -23,13 +23,6 @@ jobs:
       #   env:
       #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: |
-          ls -lh >> echo.txt
-          cat echo.txt
-          cd dependent-project
-          ls -lh >> echo.txt
-          cat echo.txt
-          echo $PWD
-          cat package.json
           touch cenas.json
           echo 'cenas' >> cenas.json
           echo '--- 1'

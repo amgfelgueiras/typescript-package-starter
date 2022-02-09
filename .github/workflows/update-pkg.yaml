@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: amgfelgueiras/dependent-project
-          path: dependent-project
+          path: dependent-projectx
       - name: Update PKGs
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

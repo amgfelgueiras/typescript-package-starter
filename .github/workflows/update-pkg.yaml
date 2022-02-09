@@ -28,16 +28,18 @@ jobs:
         run: |
           cd dependent-project
           echo $PWD
-          echo '----'
+          echo '---- 1'
           cat package.json
-          echo '----'
+          echo '---- 2'
           npm install
+          echo '---- 3'
           npm install @amgfelgueiras/typescript-package-starter
-          echo '----'
+          echo '---- 4'
           cat package.json
           echo '----'
           git config user.name "António Felgueiras"
           git config user.email "amgfelgueiras@gmail.com"
+          echo '---- 5'
           git add .
           git commit -m "version updated"
           git push

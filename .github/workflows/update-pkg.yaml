@@ -29,8 +29,7 @@ jobs:
           npm install
           npm install @amgfelgueiras/typescript-package-starter
           cat package.json
-      - name: Push Changes
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com

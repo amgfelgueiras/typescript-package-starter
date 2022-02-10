@@ -12,34 +12,3 @@ jobs:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           repository: amgfelgueiras/dependent-project
           event-type: update_ng_shared_package
-          # client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
-
-    # name: Update Pkgs
-    # steps:
-    #   # - name: Node $
-    #   #   uses: actions/setup-node@v2
-    #   #   with:
-    #   #     node-version: v16.13.1
-    #   #     registry-url: "https://npm.pkg.github.com"
-    #   #     scope: "@amgfelgueiras"
-    #   # - name: Install Angular CLI
-    #   #   run: npm i -g @angular/cli
-    #   - uses: actions/checkout@v2
-    #     # with:
-    #     #   repository: amgfelgueiras/dependent-project
-    #     #   path: dependent-project
-    #   # - name: Update PKGs
-    #   #   env:
-    #   #     NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   - run: |
-    #       touch cenas.json
-    #       echo 'cenas' >> cenas.json
-    #       echo '--- 1'
-    #       git config user.name github-actions
-    #       git config user.email github-actions@github.com
-    #       echo '--- 2'
-    #       git add .
-    #       git commit -m "generated"
-    #       echo '--- 3'
-    #       git push
-# REPO_ACCESS_TOKEN => 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

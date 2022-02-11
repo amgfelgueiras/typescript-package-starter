@@ -3,12 +3,29 @@ on:
   push:
     branches: [main]
 jobs:
-  back_merge_job:
+  dispatch:
+    strategy:
+      matrix:
+        repo:
+          [
+            "amgfelgueiras/dependent-project",
+            "amgfelgueiras/dependent-project-two",
+          ]
     runs-on: ubuntu-latest
     steps:
       - name: Repository Dispatch
         uses: peter-evans/repository-dispatch@v1
         with:
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
-          repository: amgfelgueiras/dependent-project
-          event-type: update_ng_shared_package
+          repository: ${{ matrix.repo }}
+          event-type: update_ng_shared_package_major_version
+
+  # back_merge_job:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Repository Dispatch
+  #       uses: peter-evans/repository-dispatch@v1
+  #       with:
+  #         token: ${{ secrets.REPO_ACCESS_TOKEN }}
+  #         repository: amgfelgueiras/dependent-project
+  #         event-type: update_ng_shared_package_major_version
